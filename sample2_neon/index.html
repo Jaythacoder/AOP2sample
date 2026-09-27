@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask of Pablo | Neon Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #00332C;
+        }
+        h1, h2, .font-orbitron { font-family: 'Orbitron', sans-serif; }
+
+        /* Full-Screen Dreamy Background Slideshow */
+        .bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .slide.active { opacity: 1; }
+
+        /* Color Overlay for the Hue Fade (#00332C to #FF4A00) */
+        .color-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(0, 51, 44, 0.8) 0%, rgba(255, 74, 0, 0.5) 100%);
+            pointer-events: none;
+        }
+
+        .neon-glass {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 74, 0, 0.4);
+            color: white;
+        }
+        .neon-text { text-shadow: 0 0 10px #FF4A00, 0 0 20px #FF4A00; color: #FF4A00; }
+        .btn-neon {
+            background-color: #FF4A00;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-neon:hover {
+            background-color: #cc3b00;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 74, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="bg-slideshow">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1603903154377-396577f86773?q=80&w=1920')"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1536633316-73796626699e?q=80&w=1920')"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1556928039-bcf567cf982e?q=80&w=1920')"></div>
+    </div>
+    <div class="color-overlay"></div>
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto relative z-10">
+        <div class="text-2xl font-bold font-orbitron text-white drop-shadow-lg">ASK OF PABLO <span class="text-orange-500">CORE</span></div>
+        <div class="space-x-6">
+            <a href="index.html" class="text-white hover:text-orange-400 transition-colors">SYSTEM</a>
+            <a href="product.html" class="btn-neon px-4 py-2 rounded-sm font-medium">ACCESS STRAINS</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative z-10 px-6">
+        <div class="neon-glass p-12 rounded-2xl max-w-4xl text-center shadow-2xl">
+            <h1 class="text-6xl mb-6 font-bold neon-text uppercase italic leading-tight">The Digital Ascendance</h1>
+            <p class="text-xl mb-10 leading-relaxed text-gray-200">
+                Bridging the gap between biological perfection and digital precision. Our vision is to provide the most potent, chemically-pure botanical assets to the forward-thinkers of the modern age.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="product.html" class="btn-neon px-10 py-4 font-bold uppercase tracking-widest shadow-lg transform hover:scale-105">Initialize Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>3xl"></div>
+        <h1 class="text-7xl mb-6 font-bold neon-text uppercase italic">Ascend the Frequency</h1>
+        <p class="text-xl mb-10 max-w-2xl mx-auto leading-relaxed text-gray-400">
+            Ask of Pablo is the bridge to a higher state of consciousness. We deliver precision-engineered botanical assets that shift your reality and unlock the cosmic mind.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="product.html" class="bg-neon text-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition-all">Initiate Liftoff</a>
+        </div>
+    </section>
+
+    <section class="py-20 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-gray-900 aspect-square rounded-lg neon-border flex items-center justify-center text-neon font-orbitron italic">
+                [Digital Rendering: Bio-Mech Flower]
+            </div>
+            <div>
+                <h2 class="text-4xl mb-4 font-bold text-neon uppercase">The Protocol</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-400">
+                    Our vision is the synthesis of biotechnology and botanical tradition. We provide quantified potency, verified genetics, and optimized delivery.
+                </p>
+                <p class="text-lg leading-relaxed font-orbitron text-white">
+                    STATUS: OPTIMIZED_
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-xs font-orbitron tracking-widest">
+        &copy; 2026 ASK OF PABLO CORE // SYSTEM_ACTIVE
+    </footer>
+</body>
+</html>

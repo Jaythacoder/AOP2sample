@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask of Pablo | Neon Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #000000; color: #e2e2e5; margin: 0; overflow-x: hidden; }
+        h1, h2, .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .neon-text { text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff; }
+        .neon-border { box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); border: 1px solid #00f2ff; }
+        .bg-neon { background-color: #00f2ff; }
+        .text-neon { color: #00f2ff; }
+
+        .bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .slide.active { opacity: 0.3; }
+
+        .color-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+            pointer-events: none;
+        }
+        .image-card {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        .image-card:hover { transform: scale(1.02); }
+        .image-card img { transition: transform 0.8s ease; }
+        .image-card:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="bg-slideshow">
+        <div class="slide active" style="background-image: url('../vecteezy_vibrant-cannabis-plants-under-colorful-lights_53187075.jpg')"></div>
+        <div class="slide" style="background-image: url('../madhana_gopal-skull-6081089_1920.jpg')"></div>
+        <div class="slide" style="background-image: url('../nomevisualizzato-skull-5885217_1920.jpg')"></div>
+    </div>
+    <div class="color-overlay"></div>
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto relative z-10">
+        <a href="index.html" class="text-2xl font-bold font-orbitron text-neon">ASK OF PABLO <span class="text-white">CORE</span></a>
+        <div class="space-x-6">
+            <a href="index.html" class="hover:text-neon transition-colors">SYSTEM</a>
+            <a href="product.html" class="border border-neon text-neon px-4 py-2 rounded-sm">ACCESS STRAINS</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 relative z-10">
+        <!-- Warning Banner -->
+        <div id="warning-banner" class="mb-12 p-4 bg-cyan-900/30 border border-cyan-500/50 rounded-sm text-center text-cyan-200 text-xs uppercase tracking-widest font-orbitron italic">
+            Fetching Neural Safety Logs...
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="image-card h-[600px] rounded-sm overflow-hidden neon-border">
+                    <img id="slideshow" src="../vecteezy_vibrant-cannabis-plants-under-colorful-lights_53187075.jpg" alt="Vibrant Cannabis" class="w-full h-full object-cover transition-opacity duration-1000">
+                    <script>
+                        const images = ['../vecteezy_vibrant-cannabis-plants-under-colorful-lights_53187075.jpg', '../madhana_gopal-skull-6081089_1920.jpg', '../nomevisualizzato-skull-5885217_1920.jpg'];
+                        let currentIndex = 0;
+                        setInterval(() => {
+                            const imgElement = document.getElementById('slideshow');
+                            imgElement.style.opacity = 0;
+                            setTimeout(() => {
+                                currentIndex = (currentIndex + 1) % images.length;
+                                imgElement.src = images[currentIndex];
+                                imgElement.style.opacity = 1;
+                            }, 1000);
+                        }, 4000);
+                    </script>
+                </div>
+                <div class="space-y-4">
+                    <div class="image-card h-[288px] rounded-sm overflow-hidden border border-gray-800">
+                        <img src="../esteban-lopez-cQtAjvP6hUQ-unsplash.jpg" class="w-full h-full object-cover" alt="Detail 1">
+                    </div>
+                    <div class="image-card h-[288px] rounded-sm overflow-hidden border border-gray-800">
+                        <img src="../esteban-lopez-t9jQie6cUhg-unsplash.jpg" class="w-full h-full object-cover" alt="Detail 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center pt-12">
+                <div class="bg-gray-900/80 p-10 rounded-sm neon-border shadow-2xl backdrop-blur-xl">
+                    <h1 class="text-4xl font-bold font-orbitron text-white mb-2 uppercase tracking-tighter">Cyber-Glitch Haze</h1>
+                    <p class="text-neon font-orbitron text-sm mb-6">GENETIC_ID: CGH-889-X</p>
+
+                    <div class="flex flex-col gap-6 mb-8">
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-4xl font-bold text-white font-orbitron">₦15,000</span>
+                            <span class="text-gray-500 text-xs uppercase font-orbitron">/ UNIT_GRAM</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-2 text-xs uppercase font-orbitron">
+                            <label class="flex justify-between items-center p-3 border border-gray-800 bg-black/60 rounded-sm cursor-pointer hover:border-neon transition-colors">
+                                <span class="flex items-center"><input type="radio" name="weight" value="2" checked class="mr-3 accent-cyan-400"> 2g</span>
+                                <span class="text-gray-400">₦28,000</span>
+                            </label>
+                            <label class="flex justify-between items-center p-3 border border-gray-800 bg-black/60 rounded-sm cursor-pointer hover:border-neon transition-colors">
+                                <span class="flex items-center"><input type="radio" name="weight" value="4" class="mr-3 accent-cyan-400"> 4g</span>
+                                <span class="text-gray-400">₦55,000</span>
+                            </label>
+                            <label class="flex justify-between items-center p-3 border border-gray-800 bg-black/60 rounded-sm cursor-pointer hover:border-neon transition-colors">
+                                <span class="flex items-center"><input type="radio" name="weight" value="7" class="mr-3 accent-cyan-400"> 7g</span>
+                                <span class="text-gray-400">₦90,000</span>
+                            </label>
+                            <label class="flex justify-between items-center p-3 border border-gray-800 bg-black/60 rounded-sm cursor-pointer hover:border-neon transition-colors">
+                                <span class="flex items-center"><input type="radio" name="weight" value="14" class="mr-3 accent-cyan-400"> 14g</span>
+                                <span class="text-gray-400">₦170,000</span>
+                            </label>
+                            <label class="flex justify-between items-center p-3 border border-gray-800 bg-black/60 rounded-sm cursor-pointer hover:border-neon transition-colors">
+                                <span class="flex items-center"><input type="radio" name="weight" value="28" class="mr-3 accent-cyan-400"> 28g</span>
+                                <span class="text-gray-400">₦320,000</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 p-6 bg-black/60 rounded-sm border-2 border-dashed border-neon text-center">
+                        <p class="font-bold text-neon mb-4 uppercase tracking-widest font-orbitron">Select Your Territory</p>
+                        <select id="location" class="w-full p-3 bg-black border border-gray-800 text-neon font-orbitron text-xs uppercase rounded-sm text-center cursor-pointer">
+                            <option value="" disabled selected>Choose Location...</option>
+                            <option value="asaba">Asaba</option>
+                            <option value="warri">Warri</option>
+                            <option value="abuja">Abuja</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-4">
+                        <button onclick="alert('Initializing encrypted payment sequence...')" class="w-full bg-neon text-black py-4 font-bold uppercase tracking-widest hover:bg-white transition-all">
+                            Execute Purchase
+                        </button>
+                        <a href="assets/sample.html" target="_blank" class="block text-center text-gray-500 underline text-xs font-orbitron hover:text-neon">
+                            View Genomic Report (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32 pt-20 border-t border-gray-900">
+            <h2 class="text-2xl font-bold font-orbitron text-neon uppercase mb-12 text-center">Performance Metrics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-gray-900 p-6 border border-gray-800 rounded-sm text-center">
+                    <p class="text-xs text-gray-500 uppercase font-orbitron mb-2">Cognition</p>
+                    <div class="text-2xl font-bold text-white font-orbitron">++ HIGH</div>
+                </div>
+                <div class="bg-gray-900 p-6 border border-gray-800 rounded-sm text-center">
+                    <p class="text-xs text-gray-500 uppercase font-orbitron mb-2">Serotonin</p>
+                    <div class="text-2xl font-bold text-white font-orbitron">MODERATE</div>
+                </div>
+                <div class="bg-gray-900 p-6 border border-gray-800 rounded-sm text-center">
+                    <p class="text-xs text-gray-500 uppercase font-orbitron mb-2">Dopamine</p>
+                    <div class="text-2xl font-bold text-white font-orbitron">++ MAX</div>
+                </div>
+                <div class="bg-gray-900 p-6 border border-gray-800 rounded-sm text-center">
+                    <p class="text-xs text-gray-500 uppercase font-orbitron mb-2">Latency</p>
+                    <div class="text-2xl font-bold text-white font-orbitron">ZERO</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../app.js"></script>
+    <script>
+        async function initializeDynamicContent() {
+            const strain = await PabloAPI.getActiveStrain();
+            const knowledge = await PabloAPI.getKnowledge();
+
+            if (knowledge) {
+                const banner = document.getElementById('warning-banner');
+                banner.innerHTML = `<strong class="text-white">SYSTEM WARNING:</strong> ${knowledge.colosWarning || 'Ensure botanical purity.'}`;
+            }
+
+            if (!strain) return;
+
+            const nameHeader = document.querySelector('h1');
+            if (nameHeader) nameHeader.textContent = strain.name;
+
+            const priceDisplay = document.querySelector('.text-4xl.font-bold text-white font-orbitron');
+            if (priceDisplay) {
+                priceDisplay.textContent = `₦${strain.pricePerGram.toLocaleString()}`;
+            }
+
+            const weightTiers = document.querySelectorAll('input[name="weight"]');
+            const weights = strain.weights;
+
+            weightTiers.forEach(input => {
+                const weightKey = input.value + 'g';
+                if (weights[weightKey]) {
+                    const label = input.closest('label');
+                    const priceSpan = label.querySelector('span:last-child');
+                    if (priceSpan) {
+                        priceSpan.textContent = `₦${weights[weightKey].toLocaleString()}`;
+                    }
+                }
+            });
+        }
+        window.onload = initializeDynamicContent;
+    </script>
+    <footer class="py-10 text-center text-gray-600 text-xs font-orbitron tracking-widest border-t border-gray-900 mt-20">
+        &copy; 2026 ASK OF PABLO CORE // SYSTEM_ACTIVE
+    </footer>
+</body>
+</html>
